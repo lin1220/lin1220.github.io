@@ -17,4 +17,19 @@
     </data>
     </url>
 
+    
+  <url>
+    <loc>http://yoursite.com/2017/03/10/hello-world/</loc>
+    <lastmod>2017-03-10T01:15:44.260Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2017-03-10T01:15:44.260Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
 </urlset>

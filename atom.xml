@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>lin_1220博客</title>
-  
+  <title>lin_1220</title>
+  <subtitle>记录生活点滴</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-10T15:12:31.070Z</updated>
+  <updated>2017-03-12T14:10:25.249Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,115 +16,148 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Markdown语法</title>
-    <link href="http://yoursite.com/2017/03/10/hello-world/"/>
-    <id>http://yoursite.com/2017/03/10/hello-world/</id>
-    <published>2017-03-10T01:15:44.260Z</published>
-    <updated>2017-03-10T15:12:31.070Z</updated>
+    <title>使用Hexo搭建自己的博客</title>
+    <link href="http://yoursite.com/2017/03/12/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://yoursite.com/2017/03/12/使用Hexo搭建自己的博客/</id>
+    <published>2017-03-12T01:02:30.000Z</published>
+    <updated>2017-03-12T14:10:25.249Z</updated>
     
-    <content type="html"><![CDATA[<p>1.标题</p>
-<p>使用 # 表示标题，一级标题使用一个 # ，二级标题使用两个 ## ，以此类推，共有六级标题。<br>使用 ===== 表示高阶标题，使用 ——— 表示次阶标题。</p>
-<h1 id="和标题之间最好加一个空格。不要问我为什么，貌似有时候不会被识别为标题？已经忘记自己为什么要加空格了，也许是任性。"><a href="#和标题之间最好加一个空格。不要问我为什么，貌似有时候不会被识别为标题？已经忘记自己为什么要加空格了，也许是任性。" class="headerlink" title="和标题之间最好加一个空格。不要问我为什么，貌似有时候不会被识别为标题？已经忘记自己为什么要加空格了，也许是任性。"></a>和标题之间最好加一个空格。不要问我为什么，貌似有时候不会被识别为标题？已经忘记自己为什么要加空格了，也许是任性。</h1><p>==== 和 —- 表示标题时，大于等于2个都可以表示。<br>我通常在标题分级时使用标题标记，这个的用处很明了了。<br>示例1</p>
-<p>1<br>2<br>3<br>4</p>
-<h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h6 id="这是六级标题"><a href="#这是六级标题" class="headerlink" title="这是六级标题"></a>这是六级标题</h6><p>这是一级标题<br>这是二级标题</p>
-<p>这是三级标题</p>
-<p>示例2</p>
-<p>1<br>2<br>3<br>4<br>5</p>
-<h1 id="这是一级标题-1"><a href="#这是一级标题-1" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题-1"><a href="#这是二级标题-1" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><p>这是一级标题<br>这是二级标题</p>
-<p>2.引用</p>
-<p>使用 &gt; 表示引用， &gt;&gt; 表示引用里面再套一层引用，依次类推。</p>
-<p>如果 &gt; 和 &gt;&gt; 嵌套使用的话，从 &gt;&gt; 退到 &gt; 时，必须之间要加一个空格或者 &gt; 作为过渡，否则默认为下一行和上一行是同一级别的引用。如示例所示。<br>引用标记里可以使用其他标记，如：有序列表或无序列表标记，代码标记等。<br>示例</p>
-<p>1<br>2<br>3<br>4<br>5</p>
-<blockquote>
-<p>这是一级引用</p>
-<blockquote>
-<p>这是二级引用</p>
-<blockquote>
-<p>这是三级引用<br>这是一级引用<br>这是一级引用</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>这是二级引用</p>
-<p>这是三级引用</p>
-<p>这是一级引用</p>
-<p>1.3 代码块</p>
-<p>使用三个`表示代码块。</p>
-<p>这个符号是在Esc` 键下面，切换到英文下即可。<br>本文档所有使用讲解Markdown语法标记示例的地方都是使用代码块标记的。<br>1<br>2<br>3<br>4<br>var canvas = document.getElementById(“canvas”);<br>var context = canvas.getContext(“2d”);<br>1.4 行内代码</p>
-<p>使用``表示行内代码。本页部分文字中间的英文字母就是使用行内代码标记标记的。</p>
-<p>示例</p>
-<p>1<br>这是<code>javascript</code>代码<br>这是 javascript 代码</p>
-<p>1.5 链接</p>
-<p>使用 <a href="link"></a> 表示行内链接。其中：</p>
-<p>[] 内的内容为要添加链接的文字。<br>link 为链接地址。<br>示例</p>
-<p>我觉得MarkLite真是个牛逼的编辑器😊.</p>
-<p>1.6 导入图片</p>
-<p>使用 <img src="/path/to/img.jpg" alt="Alt text"> 导入图片。其中：</p>
-<p>Alt text 为如果图片无法显示时显示的文字；<br>/path/to/img.jpg 为图片所在路径；<br>点击辅助键盘中的添加图片按钮，MarkLite会自动帮你帮你把图片上传到图片存储服务器，并补齐链接，让你一步到位，是不是很方便😊</p>
-<p>示例</p>
-<p>1<br><img src="http://i1.piimg.com/567954/ea65f02e0cd670a4.jpg" alt="MarkLite"><br>MarkLite</p>
-<p>1.7 粗体和斜体</p>
-<p>使用 <em>* 或者 __ 表示粗体。<br>使用 </em> 或者 <em> 表示斜体。<br>前后的 * 或 </em> 与要 加粗或倾斜 的字体之间不能有空格。<br>示例</p>
-<p>1<br>2<br><strong>粗体1</strong>    <strong>粗体2</strong><br> <em>斜体1</em>    <em>斜体2</em><br>粗体1 粗体2</p>
-<p>斜体1 斜体2</p>
-<p>1.8 列表</p>
-<p>使用 1. 2. 3. 表示有序列表，使用 * 或 - 或 + 表示无序列表。</p>
-<p>无序列表或有序列表标记和后面的文字之间要有一个空格隔开。<br>有序列表标记不是按照你写的数字进行显示的，而是根据当前有序列表标记所在位置显示的，如示例1所示。<br>无序列表的项目符号是按照实心圆、空心圆、实心方格的层级关系递进的，如例2所示。通常情况下，同一层级使用同一种标记表示，便于自己查看和管理。<br>无序列表和有序列表标记的使用场景也很明了，故不多说。<br>示例</p>
-<p>例1：有序列表</p>
-<p>1<br>2<br>3<br>1. 第一点<br>2. 第二点<br>4. 第三点<br>第一点<br>第二点<br>第三点<br>例2：无序列表</p>
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7</p>
+    <content type="html"><![CDATA[<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><p>本次搭建在window 10系统之上，如果您是Mac系统，可能不适用<br>开始之前，您必须做好以下准备工作  </p>
 <ul>
-<li>呵呵<ul>
-<li>嘉嘉<ul>
-<li>嘻嘻<ul>
-<li>吼吼<pre><code>- 嘎嘎
-        + 桀桀
-        * 哈哈
-</code></pre></li>
+<li>拥有一个github账号，没有的话去注册一个，知道git与github大概是干什么用的  </li>
+<li>了解nodejs是什么玩意，不知道请自行百度</li>
+<li>浏览一下<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">Hexo官网</a></li>
+<li>有空可以看一下<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT主题</a>，等不及的直接跳过</li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>呵呵<ul>
-<li>嘉嘉<ul>
-<li>嘻嘻<ul>
-<li>吼吼<pre><code>*   嘎嘎
-        *   桀桀
-        *   哈哈
-</code></pre>1.9 分割线</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>使用 — 或者 <em>** 或者 </em> <em> </em> 表示水平分割线。</p>
-<p>只要 * 或者 - 大于等于三个就可组成一条平行线。<br>使用 — 作为水平分割线时，要在它的前后都空一行，防止 — 被当成标题标记的表示方式。<br>示例</p>
-<p>1<br>2<br>3<br>4<br>5</p>
-<h2 id="6"><a href="#6" class="headerlink" title="6"></a>6</h2><hr>
-<hr>
-<p>1.11 删除线</p>
-<p>使用 ~~ 表示删除线。</p>
-<p>注意 ~~ 和 要添加删除线的文字之间不能有空格。<br>我常使用在显示的告诉自己这行文字是要删除的。<br>示例</p>
-<p>1<br><del>这是一条删除线</del><br>这是一条删除线</p>
+<p>然后浏览一下使用Hexo会用到的几个命令，没错，就几个而已  </p>
+<pre><code>hexo cl = hexo clear //新建文章
+hexo g  = hexo generate //把文章生产静态网页
+hexo s  = hexo server //启动本地调试环境
+hexo d  = hexo deploy //部署到github
+hexo d -g //生成静态网页并部署到github，相当于执行了hexo g和hexo d两步  
+</code></pre><h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><h4 id="安装node"><a href="#安装node" class="headerlink" title="安装node"></a>安装node</h4><p>  到<a href="https://nodejs.org/en/" target="_blank" rel="external">nodejs官网</a>下载最新版本的nodejs安装包，一路安装就OK<br>  安装成功之后，查看node版本号  </p>
+<pre><code>C:\Users\lenovo&gt;node -v
+v6.10.0
+</code></pre><h4 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h4><p>  可以参考<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/" target="_blank" rel="external">git教程——廖雪峰的官方网站</a><br>  安装成功之后，查看git版本号  </p>
+<pre><code>C:\Users\lenovo&gt;git --version
+git version 1.9.5.msysgit.1  
+</code></pre><h4 id="在github上创建一个项目，并命名为lin1220-github-io，记住，名字必须为-github用户名-github-io（要借助github托管必须这么命名，怪我咯）"><a href="#在github上创建一个项目，并命名为lin1220-github-io，记住，名字必须为-github用户名-github-io（要借助github托管必须这么命名，怪我咯）" class="headerlink" title="在github上创建一个项目，并命名为lin1220.github.io，记住，名字必须为 github用户名.github.io（要借助github托管必须这么命名，怪我咯）"></a>在github上创建一个项目，并命名为lin1220.github.io，记住，名字必须为 github用户名.github.io（要借助github托管必须这么命名，怪我咯）</h4><h4 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h4><pre><code>C:\Users\lenovo&gt;npm install -g hexo  
+</code></pre><p>安装成功之后，查看hexo版本号</p>
+<pre><code>C:\Users\lenovo&gt;hexo -v
+hexo-cli: 1.0.2
+os: Windows_NT 10.0.14393 win32 x64
+http_parser: 2.7.0
+node: 6.10.0
+v8: 5.1.281.93
+uv: 1.9.1
+zlib: 1.2.8
+ares: 1.10.1-DEV
+icu: 58.2
+modules: 48
+openssl: 1.0.2k    
+</code></pre><h4 id="github配置"><a href="#github配置" class="headerlink" title="github配置"></a>github配置</h4><p>  git是版本管理工具，本次搭建要把博客放在github上托管，如果您是git老用户，直接跳过本步骤；如果是刚刚安装git的新用户，您需要为git提交进行全局配置一些参数，以便使用git来提交博客（或者是代码）到github上，配置如下：  </p>
+<pre><code>git config --global user.email xxx@qq.com
+git config --global user.name xxx
+ssh-keygen -t rsa -C xxx@163.com(邮箱地址)      // 生成ssh
+找到.ssh文件夹打开，使用cat id_rsa.pub    //打开公钥ssh串
+登陆github，settings －&gt; SSH keys  －&gt; add ssh keys（把上面的内容全部添加进去即可）  
+</code></pre><p>本步骤不明白请自行百度<br>好了，可以进行hexo博客搭建了  </p>
+<h2 id="搭建Hexo"><a href="#搭建Hexo" class="headerlink" title="搭建Hexo"></a>搭建Hexo</h2><h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><p>在某个地方新建一个文件夹（比如blog），然后进入blog目录，以下所有操作都是在该目录下执行  </p>
+<pre><code>D:\Exploit\blog&gt;hexo init
+INFO  Cloning hexo-starter to D:\Exploit\blog
+Cloning into &apos;D:\Exploit\blog&apos;...
+remote: Counting objects: 53, done.
+remote: Total 53 (delta 0), reused 0 (delta 0), pack-reused 53
+Unpacking objects: 100% (53/53), done.
+
+**************** 
+
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.0.0 (node_modules\chokidar\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.1.1: wanted {&quot;os&quot;:&quot;darwin&quot;,&quot;arch&quot;:&quot;any&quot;} (current: {&quot;os&quot;:&quot;win32&quot;,&quot;arch&quot;:&quot;x64&quot;})
+INFO  Start blogging with Hexo!  
+</code></pre><p>当你看到”INFO  Start blogging with Hexo!”时，表示初始化完成，我们查看一下blog文件夹的目录结构  </p>
+<pre><code>D:\Exploit\blog&gt;ls
+_config.yml  node_modules  package.json  scaffolds  source  themes  
+</code></pre><p>_config.yml：整个博客网站的配置文件<br>node_modules：node模块（比如：hexo-deployer-git，等一下部署到git需要用到该模块）<br>source：存放资源文章，您所写的文章都会保存在这里<br>themes：存放主题  </p>
+<h4 id="生成静态页面"><a href="#生成静态页面" class="headerlink" title="生成静态页面"></a>生成静态页面</h4><p>初始化完成之后，source文件夹下面已经有一篇默认的文章，相当于demo  </p>
+<pre><code>D:\Exploit\blog&gt;cd source/_posts
+D:\Exploit\blog\source\_posts&gt;ls
+hello-world.md
+</code></pre><p>接下来将hello-world.md（.md表示该文件为markdown文件）变成静态页面  </p>
+<pre><code>D:\Exploit\blog&gt;hexo g
+INFO  Start processing
+INFO  Files loaded in 252 ms
+INFO  Generated: index.html
+INFO  Generated: archives/index.html
+INFO  Generated: fancybox/blank.gif
+INFO  Generated: fancybox/jquery.fancybox.css
+INFO  Generated: fancybox/jquery.fancybox.pack.js
+INFO  Generated: fancybox/jquery.fancybox.js
+INFO  Generated: fancybox/fancybox_loading@2x.gif
+INFO  Generated: fancybox/fancybox_loading.gif
+INFO  Generated: fancybox/fancybox_sprite@2x.png
+INFO  Generated: fancybox/fancybox_overlay.png
+INFO  Generated: fancybox/fancybox_sprite.png
+INFO  Generated: archives/2017/03/index.html
+INFO  Generated: archives/2017/index.html
+INFO  Generated: css/fonts/fontawesome-webfont.eot
+INFO  Generated: js/script.js
+INFO  Generated: fancybox/helpers/jquery.fancybox-buttons.css
+INFO  Generated: fancybox/helpers/jquery.fancybox-buttons.js
+INFO  Generated: fancybox/helpers/jquery.fancybox-thumbs.css
+INFO  Generated: fancybox/helpers/jquery.fancybox-media.js
+INFO  Generated: fancybox/helpers/jquery.fancybox-thumbs.js
+INFO  Generated: css/fonts/fontawesome-webfont.woff
+INFO  Generated: css/style.css
+INFO  Generated: fancybox/helpers/fancybox_buttons.png
+INFO  Generated: css/fonts/FontAwesome.otf
+INFO  Generated: css/fonts/fontawesome-webfont.ttf
+INFO  Generated: 2017/03/12/hello-world/index.html
+INFO  Generated: css/fonts/fontawesome-webfont.svg
+INFO  Generated: css/images/banner.jpg
+INFO  28 files generated in 971 ms  
+</code></pre><h4 id="启动本地调试"><a href="#启动本地调试" class="headerlink" title="启动本地调试"></a>启动本地调试</h4><p>接下来启动本地调试，在浏览器中预览页面效果</p>
+<pre><code>D:\Exploit\blog&gt;hexo s
+INFO  Start processing
+INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.  
+</code></pre><h4 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h4><p>如果您觉得hexo默认的主题（landscape）已经满足您的要求，请跳过本步骤  </p>
+<pre><code>D:\Exploit\blog&gt;cd themes
+D:\Exploit\blog\themes&gt;ls
+landscape
+</code></pre><p>全球最大的无性别交友网站github为我们提供了大量的主题，让您尽情挑选<br>下面贴出一些github上start挺高的主题<br>iissnan/hexo-theme-next<br>litten/hexo-theme-yilia<br>TryGhost/Casper<br>wuchong/jacman<br>A-limon/pacman<br>我使用的是人气最高的NexT主题（<a href="http://jm.taobao.org/" target="_blank" rel="external">阿里中间件团队博客</a>用的也是这个）  </p>
+<h4 id="从github上clone主题"><a href="#从github上clone主题" class="headerlink" title="从github上clone主题"></a>从github上clone主题</h4><pre><code>D:\Exploit\blog&gt;git clone https://github.com/iissnan/hexo-theme-next themes/next
+</code></pre><h4 id="修改配置文件中的默认主题"><a href="#修改配置文件中的默认主题" class="headerlink" title="修改配置文件中的默认主题"></a>修改配置文件中的默认主题</h4><p>  打开blog/_config.yml文件，修改theme配置项  </p>
+<pre><code>theme: next  //默认是landscape
+             //注意“theme:”之后有一个英文的空格，该配置文件是YAML文件，这么写是YAML规定的语法 
+</code></pre><p>接下来再修改其他一些必要的配置项，更加具体的配置项说明请移步<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">Hexo文档</a>查看  </p>
+<pre><code># Site
+title: lin_1220     //网站标题
+subtitle: 记录生活点滴      //网站副标题
+description:    //网站描述
+author: lin_1220    //作者
+language: zh-Hans   //语言，zh-Hans是中文简体
+timezone:   //时区  
+</code></pre><h2 id="部署到github上"><a href="#部署到github上" class="headerlink" title="部署到github上"></a>部署到github上</h2><p>现在将博客部署到github上  </p>
+<h4 id="部署之前先修改bolg下面的-config-yml"><a href="#部署之前先修改bolg下面的-config-yml" class="headerlink" title="部署之前先修改bolg下面的_config.yml"></a>部署之前先修改bolg下面的_config.yml</h4><pre><code>deploy:
+  type: git
+  repo: https://github.com/lin1220/lin1220.github.io.git  //将lin1220替换成自己的用户名
+  branch: master  
+</code></pre><p><em>备注：在hexo3.x版本下，type应该是git，不是github；另外冒号后面都有一个英文的空格，不然会报错的</em></p>
+<h4 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h4><pre><code>D:\Exploit\blog&gt;hexo d  
+</code></pre><p><em>备注：如果执行上述命令报错，执行下面命令</em><br>    npm install hexo-deployer-git –save<br>部署成功之后，访问<a href="https://lin1220.github.io" target="_blank" rel="external">https://lin1220.github.io</a><br>看到跟本地预览时一样的效果</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;1.标题&lt;/p&gt;
-&lt;p&gt;使用 # 表示标题，一级标题使用一个 # ，二级标题使用两个 ## ，以此类推，共有六级标题。&lt;br&gt;使用 ===== 表示高阶标题，使用 ——— 表示次阶标题。&lt;/p&gt;
-&lt;h1 id=&quot;和标题之间最好加一个空格。不要问我为什么，貌似有时候不会被识别
+      &lt;h2 id=&quot;前期准备&quot;&gt;&lt;a href=&quot;#前期准备&quot; class=&quot;headerlink&quot; title=&quot;前期准备&quot;&gt;&lt;/a&gt;前期准备&lt;/h2&gt;&lt;p&gt;本次搭建在window 10系统之上，如果您是Mac系统，可能不适用&lt;br&gt;开始之前，您必须做好以下准备工作  &lt;/p&gt;
+&lt;
     
     </summary>
     
-      <category term="Markdown" scheme="http://yoursite.com/categories/Markdown/"/>
+      <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
     
     
-      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
     
   </entry>
   

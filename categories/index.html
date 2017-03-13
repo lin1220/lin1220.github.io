@@ -76,8 +76,6 @@
 
 
 
-  
-
 
   <link rel="alternate" href="/atom.xml" title="lin_1220" type="application/atom+xml" />
 
@@ -93,13 +91,13 @@
 
 <meta name="description" content="less is more.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="categories">
+<meta property="og:title" content="分类">
 <meta property="og:url" content="http://yoursite.com/categories/index.html">
 <meta property="og:site_name" content="lin_1220">
 <meta property="og:description" content="less is more.">
-<meta property="og:updated_time" content="2017-03-12T16:13:20.228Z">
+<meta property="og:updated_time" content="2017-03-13T08:25:39.634Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
+<meta name="twitter:title" content="分类">
 <meta name="twitter:description" content="less is more.">
 
 
@@ -138,7 +136,7 @@
   
 
   
-    categories | lin_1220
+    分类 | lin_1220
   
 </title>
 </head>
@@ -332,6 +330,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
@@ -417,7 +425,7 @@
   <div id="posts" class="posts-expand">
   <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">categories</h1>
+	<h1 class="post-title" itemprop="name headline">分类</h1>
 
 
 
@@ -425,7 +433,14 @@
 
     
     
-      
+      <div class="category-all-page">
+        <div class="category-all-title">
+            目前共计 1 个分类
+        </div>
+        <div class="category-all">
+          <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li></ul>
+        </div>
+      </div>
     
   </div>
 
@@ -435,23 +450,6 @@
 
 
           
- <!-- 多说评论框 start -->
- 	<div class="ds-thread" data-thread-key="<%- page.path %>" data-title="<%- page.title %>" data-url="<%- page.permalink %>"></div>
- <!-- 多说评论框 end -->
- <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
- <script type="text/javascript">
- var duoshuoQuery = {short_name:"lin1220"};
- 	(function() {
- 		var ds = document.createElement('script');
- 		ds.type = 'text/javascript';ds.async = true;
- 		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
- 		ds.charset = 'UTF-8';
- 		(document.getElementsByTagName('head')[0]
- 		 || document.getElementsByTagName('body')[0]).appendChild(ds);
- 	})();
- 	</script>
- <!-- 多说公共JS代码 end -->
-
 
         </div>
         
@@ -497,10 +495,10 @@
             
             
             <div class="site-state-item site-state-categories">
-              
+              <a href="/categories/index.html">
                 <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">分类</span>
-              
+              </a>
             </div>
           
 
@@ -508,10 +506,10 @@
             
             
             <div class="site-state-item site-state-tags">
-              
+              <a href="/tags/index.html">
                 <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">标签</span>
-              
+              </a>
             </div>
           
 

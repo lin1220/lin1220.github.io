@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content=",,,," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -91,13 +91,13 @@
 
 <meta name="description" content="less is more.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="标签">
+<meta property="og:title" content="标签云">
 <meta property="og:url" content="http://yoursite.com/tags/index.html">
 <meta property="og:site_name" content="lin_1220">
 <meta property="og:description" content="less is more.">
-<meta property="og:updated_time" content="2017-03-12T16:14:36.780Z">
+<meta property="og:updated_time" content="2017-03-13T08:21:13.379Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="标签">
+<meta name="twitter:title" content="标签云">
 <meta name="twitter:description" content="less is more.">
 
 
@@ -136,7 +136,7 @@
   
 
   
-    标签 | lin_1220
+    标签云 | lin_1220
   
 </title>
 </head>
@@ -330,6 +330,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
@@ -415,7 +425,7 @@
   <div id="posts" class="posts-expand">
   <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">标签</h1>
+	<h1 class="post-title" itemprop="name headline">标签云</h1>
 
 
 
@@ -423,7 +433,14 @@
 
     
     
-      
+      <div class="tag-cloud">
+        <div class="tag-cloud-title">
+            目前共计 1 个标签
+        </div>
+        <div class="tag-cloud-tags">
+          <a href="/tags/Hexo/" style="font-size: 12px; color: #ccc">Hexo</a>
+        </div>
+      </div>
     
   </div>
 
@@ -433,23 +450,6 @@
 
 
           
- <!-- 多说评论框 start -->
- 	<div class="ds-thread" data-thread-key="<%- page.path %>" data-title="<%- page.title %>" data-url="<%- page.permalink %>"></div>
- <!-- 多说评论框 end -->
- <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
- <script type="text/javascript">
- var duoshuoQuery = {short_name:"lin1220"};
- 	(function() {
- 		var ds = document.createElement('script');
- 		ds.type = 'text/javascript';ds.async = true;
- 		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
- 		ds.charset = 'UTF-8';
- 		(document.getElementsByTagName('head')[0]
- 		 || document.getElementsByTagName('body')[0]).appendChild(ds);
- 	})();
- 	</script>
- <!-- 多说公共JS代码 end -->
-
 
         </div>
         
@@ -495,10 +495,10 @@
             
             
             <div class="site-state-item site-state-categories">
-              
+              <a href="/categories/index.html">
                 <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">分类</span>
-              
+              </a>
             </div>
           
 
@@ -506,10 +506,10 @@
             
             
             <div class="site-state-item site-state-tags">
-              
+              <a href="/tags/index.html">
                 <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">标签</span>
-              
+              </a>
             </div>
           
 

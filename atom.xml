@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-13T08:15:58.196Z</updated>
+  <updated>2017-03-13T08:35:29.881Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,9 +20,11 @@
     <link href="http://yoursite.com/2017/03/12/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
     <id>http://yoursite.com/2017/03/12/使用Hexo搭建自己的博客/</id>
     <published>2017-03-12T01:02:30.000Z</published>
-    <updated>2017-03-13T08:15:58.196Z</updated>
+    <updated>2017-03-13T08:35:29.881Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><p>本次搭建在window 10系统之上，如果您是Mac系统，可能不适用<br>开始之前，您必须做好以下准备工作  </p>
+    <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=457686782&auto=0&height=66"></iframe>
+
+<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><p>本次搭建在window 10系统之上，如果您是Mac系统，可能不适用<br>开始之前，您必须做好以下准备工作  </p>
 <ul>
 <li>拥有一个github账号，没有的话去注册一个，知道git与github大概是干什么用的  </li>
 <li>了解nodejs是什么玩意，不知道请自行百度</li>
@@ -159,8 +161,7 @@ INFO  Deploy done: git
     
     <summary type="html">
     
-      &lt;h2 id=&quot;前期准备&quot;&gt;&lt;a href=&quot;#前期准备&quot; class=&quot;headerlink&quot; title=&quot;前期准备&quot;&gt;&lt;/a&gt;前期准备&lt;/h2&gt;&lt;p&gt;本次搭建在window 10系统之上，如果您是Mac系统，可能不适用&lt;br&gt;开始之前，您必须做好以下准备工作  &lt;/p&gt;
-&lt;
+      &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;id=
     
     </summary>
     

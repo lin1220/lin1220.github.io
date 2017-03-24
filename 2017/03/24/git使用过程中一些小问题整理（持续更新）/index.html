@@ -95,7 +95,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/03/24/git使用过程中一些小问题整理（持续更新）/index.html">
 <meta property="og:site_name" content="lin_1220">
 <meta property="og:description" content="本地sourceTree上仍然能够看到远程已经删除的分支原因我们第一次拉取用git管理的代码（或文件）到本地时，拉取的是整个工程代码，里面包含有很多分支，我们一般开发、测试、发布都有自己分支，加上各个模块都有自己的测试、发布分支（一般都有多个，某一版本哪一天的测试分支，发布分支，几十个分支是很常见的情况），分支很多，我们会定时在服务器上清理比较久远，对我们来说已经用不到的分支，假如我删除了us">
-<meta property="og:updated_time" content="2017-03-24T08:16:39.389Z">
+<meta property="og:updated_time" content="2017-03-24T08:24:44.204Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git使用过程中一些小问题整理（持续更新）">
 <meta name="twitter:description" content="本地sourceTree上仍然能够看到远程已经删除的分支原因我们第一次拉取用git管理的代码（或文件）到本地时，拉取的是整个工程代码，里面包含有很多分支，我们一般开发、测试、发布都有自己分支，加上各个模块都有自己的测试、发布分支（一般都有多个，某一版本哪一天的测试分支，发布分支，几十个分支是很常见的情况），分支很多，我们会定时在服务器上清理比较久远，对我们来说已经用不到的分支，假如我删除了us">
@@ -567,7 +567,7 @@
       
 
       
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=459442631&auto=0&height=66"></iframe>
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=425298905&auto=1&height=66"></iframe>
 
 <h2 id="本地sourceTree上仍然能够看到远程已经删除的分支"><a href="#本地sourceTree上仍然能够看到远程已经删除的分支" class="headerlink" title="本地sourceTree上仍然能够看到远程已经删除的分支"></a>本地sourceTree上仍然能够看到远程已经删除的分支</h2><h4 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h4><p>我们第一次拉取用git管理的代码（或文件）到本地时，拉取的是整个工程代码，里面包含有很多分支，我们一般开发、测试、发布都有自己分支，加上各个模块都有自己的测试、发布分支（一般都有多个，某一版本哪一天的测试分支，发布分支，几十个分支是很常见的情况），分支很多，我们会定时在服务器上清理比较久远，对我们来说已经用不到的分支，假如我删除了user_test_20170109的分支，并把变更推送到服务器，对你自己的电脑来说，该分支你再也检测（git专有名称是跟踪）不到了，但是其他小伙伴的电脑上依然能够检测到该分支，刷新也没用，这是由于git本地仍然保存着第一次clone下来的分支信息，即使远程已经删除  </p>
 <h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h4><p>登陆git服务器，把stale（不新鲜的，过期的）状态的分支信息移除掉（.git文件里面记录的信息）  </p>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-25T02:45:12.023Z</updated>
+  <updated>2017-03-25T06:01:35.609Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>windowsj小技巧</title>
+    <link href="http://yoursite.com/2017/03/25/windowsj%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+    <id>http://yoursite.com/2017/03/25/windowsj小技巧/</id>
+    <published>2017-03-25T03:59:34.000Z</published>
+    <updated>2017-03-25T06:01:35.609Z</updated>
+    
+    <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=417833754&auto=1&height=66"></iframe>
+
+<h3 id="QQ邮箱在第三方客户端上没法同步"><a href="#QQ邮箱在第三方客户端上没法同步" class="headerlink" title="QQ邮箱在第三方客户端上没法同步"></a>QQ邮箱在第三方客户端上没法同步</h3><p><a href="http://win10.51wp.com/tutorial/269209.html" target="_blank" rel="external">http://win10.51wp.com/tutorial/269209.html</a>  </p>
+<h3 id="windows右键没有-以管理员身份运行-选项，无法安装msi程序"><a href="#windows右键没有-以管理员身份运行-选项，无法安装msi程序" class="headerlink" title="windows右键没有 以管理员身份运行 选项，无法安装msi程序"></a>windows右键没有 以管理员身份运行 选项，无法安装msi程序</h3><p>在搜索栏输入 Services.msc，察看Windows Installer服 务，如果当前状态时”已停止，请单击”启用“将其开启；<br>找到windows/system32/目录下的cmd.exe，右键“以管理员身份运行” 输入：regsvr32 msi.dll 回车，提示“DllRegisterServer在msi.dll已成功”  </p>
+<p><img src="http://oncnucmub.bkt.clouddn.com/regsvr.png" alt="image"></p>
+<h3 id="定时关机"><a href="#定时关机" class="headerlink" title="定时关机"></a>定时关机</h3><p>shutdown -s -t 14400</p>
+<h3 id="远程桌面"><a href="#远程桌面" class="headerlink" title="远程桌面"></a>远程桌面</h3><p>win+R输入mstsc，点击连接，输入密码</p>
+<p><img src="http://oncnucmub.bkt.clouddn.com/mstsc1.png" alt="image"><br><img src="http://oncnucmub.bkt.clouddn.com/mstsc2.png" alt="image"><br><img src="http://oncnucmub.bkt.clouddn.com/mstsc3.png" alt="image">  </p>
+<h3 id="chrome提示flash过期"><a href="#chrome提示flash过期" class="headerlink" title="chrome提示flash过期"></a>chrome提示flash过期</h3><p>google chrome停用过期flsh插件，导致用chrome浏览网页就直接提示flash过期，去扩展程序界面看提示检查更新失败，03错误  </p>
+<p>温馨提醒：清理用户数据时，确认书签已经同步到云  </p>
+<p>尝试解决办法：<br>1、 卸载chrome重新安装（保留用户数据形式）—— 依然一浏览带flash网页就提示flash过期<br>2、 手动删除chrome用户数据，并且卸载chrome重新安装最新版chrome —— 没有弹出，播放视频才提示flash过期  </p>
+<p>解决办法：需要新版本flash，并且是ppapi版本的  </p>
+<p>步骤：  </p>
+<p>1、 下载新插件并安装：<br><a href="http://oncnucmub.bkt.clouddn.com/install_flash_player_23_ppapi.exe" target="_blank" rel="external">install_flash_player_23_ppapi.exe</a><br>2、 重启chrome</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;id=
+    
+    </summary>
+    
+      <category term="windows" scheme="http://yoursite.com/categories/windows/"/>
+    
+    
+      <category term="windows" scheme="http://yoursite.com/tags/windows/"/>
+    
+  </entry>
   
   <entry>
     <title>java关键字—volatile</title>
@@ -365,13 +401,13 @@ public class Test3 {
     <link href="http://yoursite.com/2017/03/18/git%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E4%B8%AD%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%EF%BC%89/"/>
     <id>http://yoursite.com/2017/03/18/git使用过程中一些小问题整理（持续更新）/</id>
     <published>2017-03-18T02:45:35.000Z</published>
-    <updated>2017-03-24T09:07:02.318Z</updated>
+    <updated>2017-03-25T03:30:36.490Z</updated>
     
     <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=425298905&auto=1&height=66"></iframe>
 
-<h2 id="本地sourceTree上仍然能够看到远程已经删除的分支"><a href="#本地sourceTree上仍然能够看到远程已经删除的分支" class="headerlink" title="本地sourceTree上仍然能够看到远程已经删除的分支"></a>本地sourceTree上仍然能够看到远程已经删除的分支</h2><h4 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h4><p>我们第一次拉取用git管理的代码（或文件）到本地时，拉取的是整个工程代码，里面包含有很多分支，我们一般开发、测试、发布都有自己分支，加上各个模块都有自己的测试、发布分支（一般都有多个，某一版本哪一天的测试分支，发布分支，几十个分支是很常见的情况），分支很多，我们会定时在服务器上清理比较久远，对我们来说已经用不到的分支，假如我删除了user_test_20170109的分支，并把变更推送到服务器，对你自己的电脑来说，该分支你再也检测（git专有名称是跟踪）不到了，但是其他小伙伴的电脑上依然能够检测到该分支，刷新也没用，这是由于git本地仍然保存着第一次clone下来的分支信息，即使远程已经删除  </p>
+<h2 id="本地sourceTree上仍然能够看到远程已经删除的分支"><a href="#本地sourceTree上仍然能够看到远程已经删除的分支" class="headerlink" title="本地sourceTree上仍然能够看到远程已经删除的分支"></a>本地sourceTree上仍然能够看到远程已经删除的分支</h2><h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>我们第一次拉取用git管理的代码（或文件）到本地时，拉取的是整个工程代码，里面包含有很多分支，我们一般开发、测试、发布都有自己分支，加上各个模块都有自己的测试、发布分支（一般都有多个，某一版本哪一天的测试分支，发布分支，几十个分支是很常见的情况），分支很多，我们会定时在服务器上清理比较久远，对我们来说已经用不到的分支，假如我删除了user_test_20170109的分支，并把变更推送到服务器，对你自己的电脑来说，该分支你再也检测（git专有名称是跟踪）不到了，但是其他小伙伴的电脑上依然能够检测到该分支，刷新也没用，这是由于git本地仍然保存着第一次clone下来的分支信息，即使远程已经删除  </p>
 <h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h4><p>登陆git服务器，把stale（不新鲜的，过期的）状态的分支信息移除掉（.git文件里面记录的信息）  </p>
-<h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><p>1、打开sourceTree，点击右上角的“命令行模式”，然后执行命令 git remote show origin ，输入用户名和密码   </p>
+<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><p>1、打开sourceTree，点击右上角的“命令行模式”，然后执行命令 git remote show origin ，输入用户名和密码   </p>
 <pre><code>lenovo@LIN1220 /d/Exploit/test (qc_app_dev_user)
 $git remote show origin
 Username for &apos;http://192.168.30.6&apos;: dongsheng.lin
@@ -405,15 +441,15 @@ git -c diff.mnemonicprefix=false -c core.quotepath=false pull origin qc_app_v1.0
 0[main] us 0 init_cheap:VirtualAlloc pointer is null,Win32 error 487
 AllocationBase 0x0,BaseAddress 0xFE0000,RegionSize 0xB0000,State 0x10000
 D:\Software\devalop\git\Git\bin\sh.exe:*** Couldn&apos;t reserve space for cygwin&apos;s heap,Win32 erroe 0
-</code></pre><h4 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h4><p>进入git的安装目录，比如我的是 D:\Software\devalop\git\Git\bin，用管理员身份启动命令行，执行如下命令  </p>
+</code></pre><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>进入git的安装目录，比如我的是 D:\Software\devalop\git\Git\bin，用管理员身份启动命令行，执行如下命令  </p>
 <pre><code>D:\Software\devalop\git\Git\bin&gt;tasklist /m msys-1.0.dll
 D:\Software\devalop\git\Git\bin&gt;rebase.exe -b 0x50000000 msys-1.0.dll
 </code></pre><p>如果rebase命令执行报错，类似下面的提示：  </p>
 <pre><code>RebaseImage(msys-1.0.dll) failed with last error = 6
 </code></pre><p>那么您需要按顺序执行下面动作<br>1、把dll文件复制到另一个目录下<br>2、继续用上面的rebase命令<br>3、用复制出来的dll文件替换原来的<br>以上所有命令都必须用管理员身份执行</p>
 <h2 id="git文件大小写惹得祸"><a href="#git文件大小写惹得祸" class="headerlink" title="git文件大小写惹得祸"></a>git文件大小写惹得祸</h2><p>我们有时候会一不小心把文件（文件夹）的命名命错了，该大写的字母写成小写，该小写的写成大写的，发现之后把它改回来，提交到git，没毛病，但是其他同事的机器却会出现莫名其妙的问题，比如  </p>
-<h4 id="git服务器上有两份文件，一份大写，一份小写"><a href="#git服务器上有两份文件，一份大写，一份小写" class="headerlink" title="git服务器上有两份文件，一份大写，一份小写"></a>git服务器上有两份文件，一份大写，一份小写</h4><p>也许你会奇怪，在IDEA上明明看到就是一份文件，为什么git服务器上会有两份<br>原因：IDEA自动忽略了其中某一个文件，我们平时写代码查代码习惯直接看IDEA不看硬盘文件，回头看电脑硬盘文件目录就会发现其实真的是两份文件，一份大写一份小写<br>其实归根结底还是，.git文件提交记录未更新到最新状态，这跟清理远程已删除分支道理是一样的<br>解决方案：简单，手动删除一份您不需要的，提交到git就行了  </p>
-<h4 id="git拉取报错"><a href="#git拉取报错" class="headerlink" title="git拉取报错"></a>git拉取报错</h4><p>还是大小写导致的问题，您把原来大写的文件重新命名为小写，之后提交git，个别同事的电脑拉取代码会出现拉取不下来的情况，提示某某文件未跟踪<br>原因：您同事的电脑本地.git文件记录的是您原来提交到git服务器大写的文件，拉取时git检测不到它原先跟踪的文件，因此报错<br>解决方案：打开.gitignore文件，把报错的文件目录粘贴进去，再次拉去代码，没问题了吧。拉取好之后提交您变更的代码，之后就可以把刚才粘贴进去的文件目录去掉了，机智如我</p>
+<h3 id="git服务器上有两份文件，一份大写，一份小写"><a href="#git服务器上有两份文件，一份大写，一份小写" class="headerlink" title="git服务器上有两份文件，一份大写，一份小写"></a>git服务器上有两份文件，一份大写，一份小写</h3><p>也许你会奇怪，在IDEA上明明看到就是一份文件，为什么git服务器上会有两份<br>原因：IDEA自动忽略了其中某一个文件，我们平时写代码查代码习惯直接看IDEA不看硬盘文件，回头看电脑硬盘文件目录就会发现其实真的是两份文件，一份大写一份小写<br>其实归根结底还是，.git文件提交记录未更新到最新状态，这跟清理远程已删除分支道理是一样的<br>解决方案：简单，手动删除一份您不需要的，提交到git就行了  </p>
+<h3 id="git拉取报错"><a href="#git拉取报错" class="headerlink" title="git拉取报错"></a>git拉取报错</h3><p>还是大小写导致的问题，您把原来大写的文件重新命名为小写，之后提交git，个别同事的电脑拉取代码会出现拉取不下来的情况，提示某某文件未跟踪<br>原因：您同事的电脑本地.git文件记录的是您原来提交到git服务器大写的文件，拉取时git检测不到它原先跟踪的文件，因此报错<br>解决方案：打开.gitignore文件，把报错的文件目录粘贴进去，再次拉去代码，没问题了吧。拉取好之后提交您变更的代码，之后就可以把刚才粘贴进去的文件目录去掉了，机智如我</p>
 ]]></content>
     
     <summary type="html">
@@ -434,7 +470,7 @@ D:\Software\devalop\git\Git\bin&gt;rebase.exe -b 0x50000000 msys-1.0.dll
     <link href="http://yoursite.com/2017/03/12/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
     <id>http://yoursite.com/2017/03/12/使用Hexo搭建自己的博客/</id>
     <published>2017-03-12T01:02:30.000Z</published>
-    <updated>2017-03-24T08:24:52.678Z</updated>
+    <updated>2017-03-25T03:32:15.732Z</updated>
     
     <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=439915614&auto=1&height=66"></iframe>
 
@@ -451,13 +487,13 @@ hexo g  = hexo generate //把文章生产静态网页
 hexo s  = hexo server //启动本地调试环境
 hexo d  = hexo deploy //部署到github
 hexo d -g //生成静态网页并部署到github，相当于执行了hexo g和hexo d两步  
-</code></pre><h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><h4 id="安装node"><a href="#安装node" class="headerlink" title="安装node"></a>安装node</h4><p>  到<a href="https://nodejs.org/en/" target="_blank" rel="external">nodejs官网</a>下载最新版本的nodejs安装包，一路安装就OK<br>  安装成功之后，查看node版本号  </p>
+</code></pre><h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><h3 id="安装node"><a href="#安装node" class="headerlink" title="安装node"></a>安装node</h3><p>  到<a href="https://nodejs.org/en/" target="_blank" rel="external">nodejs官网</a>下载最新版本的nodejs安装包，一路安装就OK<br>  安装成功之后，查看node版本号  </p>
 <pre><code>C:\Users\lenovo&gt;node -v
 v6.10.0
-</code></pre><h4 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h4><p>  可以参考<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/" target="_blank" rel="external">git教程——廖雪峰的官方网站</a><br>  安装成功之后，查看git版本号  </p>
+</code></pre><h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h3><p>  可以参考<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/" target="_blank" rel="external">git教程——廖雪峰的官方网站</a><br>  安装成功之后，查看git版本号  </p>
 <pre><code>C:\Users\lenovo&gt;git --version
 git version 1.9.5.msysgit.1  
-</code></pre><h4 id="在github上创建一个项目"><a href="#在github上创建一个项目" class="headerlink" title="在github上创建一个项目"></a>在github上创建一个项目</h4><p>项目必须命名为 github用户名.github.io，比如我的就是 lin1220.github.io（要借助github托管必须这么命名，怪我咯）        </p>
+</code></pre><h3 id="在github上创建一个项目"><a href="#在github上创建一个项目" class="headerlink" title="在github上创建一个项目"></a>在github上创建一个项目</h3><p>项目必须命名为 github用户名.github.io，比如我的就是 lin1220.github.io（要借助github托管必须这么命名，怪我咯）        </p>
 <h4 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h4><pre><code>C:\Users\lenovo&gt;npm install -g hexo  
 </code></pre><p>安装成功之后，查看hexo版本号</p>
 <pre><code>C:\Users\lenovo&gt;hexo -v
@@ -472,14 +508,14 @@ ares: 1.10.1-DEV
 icu: 58.2
 modules: 48
 openssl: 1.0.2k    
-</code></pre><h4 id="github配置"><a href="#github配置" class="headerlink" title="github配置"></a>github配置</h4><p>  git是版本管理工具，本次搭建要把博客放在github上托管，如果您是git老用户，直接跳过本步骤；如果是刚刚安装git的新用户，您需要为git提交进行全局配置一些参数，以便使用git来提交博客（或者是代码）到github上，配置如下：  </p>
+</code></pre><h3 id="github配置"><a href="#github配置" class="headerlink" title="github配置"></a>github配置</h3><p>  git是版本管理工具，本次搭建要把博客放在github上托管，如果您是git老用户，直接跳过本步骤；如果是刚刚安装git的新用户，您需要为git提交进行全局配置一些参数，以便使用git来提交博客（或者是代码）到github上，配置如下：  </p>
 <pre><code>git config --global user.email xxx@qq.com
 git config --global user.name xxx
 ssh-keygen -t rsa -C xxx@163.com(邮箱地址)      // 生成ssh
 找到.ssh文件夹打开，使用cat id_rsa.pub    //打开公钥ssh串
 登陆github，settings －&gt; SSH keys  －&gt; add ssh keys（把上面的内容全部添加进去即可）  
 </code></pre><p>本步骤不明白请自行百度<br>好了，可以进行hexo博客搭建了  </p>
-<h2 id="搭建Hexo"><a href="#搭建Hexo" class="headerlink" title="搭建Hexo"></a>搭建Hexo</h2><h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><p>在某个地方新建一个文件夹（比如blog），然后进入blog目录，以下所有操作都是在该目录下执行  </p>
+<h2 id="搭建Hexo"><a href="#搭建Hexo" class="headerlink" title="搭建Hexo"></a>搭建Hexo</h2><h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>在某个地方新建一个文件夹（比如blog），然后进入blog目录，以下所有操作都是在该目录下执行  </p>
 <pre><code>D:\Exploit\blog&gt;hexo init
 INFO  Cloning hexo-starter to D:\Exploit\blog
 Cloning into &apos;D:\Exploit\blog&apos;...
@@ -496,7 +532,7 @@ INFO  Start blogging with Hexo!
 <pre><code>D:\Exploit\blog&gt;ls
 _config.yml  node_modules  package.json  scaffolds  source  themes  
 </code></pre><p>_config.yml：整个博客网站的配置文件<br>node_modules：node模块（比如：hexo-deployer-git，等一下部署到git需要用到该模块）<br>source：存放资源文章，您所写的文章都会保存在这里<br>themes：存放主题  </p>
-<h4 id="生成静态页面"><a href="#生成静态页面" class="headerlink" title="生成静态页面"></a>生成静态页面</h4><p>初始化完成之后，source文件夹下面已经有一篇默认的文章，相当于demo  </p>
+<h3 id="生成静态页面"><a href="#生成静态页面" class="headerlink" title="生成静态页面"></a>生成静态页面</h3><p>初始化完成之后，source文件夹下面已经有一篇默认的文章，相当于demo  </p>
 <pre><code>D:\Exploit\blog&gt;cd source/_posts
 D:\Exploit\blog\source\_posts&gt;ls
 hello-world.md
@@ -533,7 +569,7 @@ INFO  Generated: 2017/03/12/hello-world/index.html
 INFO  Generated: css/fonts/fontawesome-webfont.svg
 INFO  Generated: css/images/banner.jpg
 INFO  28 files generated in 971 ms  
-</code></pre><h4 id="启动本地调试"><a href="#启动本地调试" class="headerlink" title="启动本地调试"></a>启动本地调试</h4><p>接下来启动本地调试，在浏览器中预览页面效果</p>
+</code></pre><h3 id="启动本地调试"><a href="#启动本地调试" class="headerlink" title="启动本地调试"></a>启动本地调试</h3><p>接下来启动本地调试，在浏览器中预览页面效果</p>
 <pre><code>D:\Exploit\blog&gt;hexo s
 INFO  Start processing
 INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.  
@@ -542,8 +578,8 @@ INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
 D:\Exploit\blog\themes&gt;ls
 landscape
 </code></pre><p>全球最大的无性别交友网站github为我们提供了大量的主题，让您尽情挑选<br>下面贴出一些github上start挺高的主题<br>iissnan/hexo-theme-next<br>litten/hexo-theme-yilia<br>TryGhost/Casper<br>wuchong/jacman<br>A-limon/pacman<br>我使用的是人气最高的NexT主题（<a href="http://jm.taobao.org/" target="_blank" rel="external">阿里中间件团队博客</a>用的也是这个）  </p>
-<h4 id="从github上clone主题"><a href="#从github上clone主题" class="headerlink" title="从github上clone主题"></a>从github上clone主题</h4><pre><code>D:\Exploit\blog&gt;git clone https://github.com/iissnan/hexo-theme-next themes/next
-</code></pre><h4 id="修改配置文件中的默认主题"><a href="#修改配置文件中的默认主题" class="headerlink" title="修改配置文件中的默认主题"></a>修改配置文件中的默认主题</h4><p>  打开blog/_config.yml文件，修改theme配置项  </p>
+<h3 id="从github上clone主题"><a href="#从github上clone主题" class="headerlink" title="从github上clone主题"></a>从github上clone主题</h3><pre><code>D:\Exploit\blog&gt;git clone https://github.com/iissnan/hexo-theme-next themes/next
+</code></pre><h3 id="修改配置文件中的默认主题"><a href="#修改配置文件中的默认主题" class="headerlink" title="修改配置文件中的默认主题"></a>修改配置文件中的默认主题</h3><p>  打开blog/_config.yml文件，修改theme配置项  </p>
 <pre><code>theme: next  //默认是landscape
              //注意“theme:”之后有一个英文的空格，该配置文件是YAML文件，这么写是YAML规定的语法 
 </code></pre><p>接下来再修改其他一些必要的配置项，更加具体的配置项说明请移步<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">Hexo文档</a>查看  </p>
@@ -555,12 +591,12 @@ author: lin_1220    //作者
 language: zh-Hans   //语言，zh-Hans是中文简体
 timezone:   //时区  
 </code></pre><h2 id="部署到github上"><a href="#部署到github上" class="headerlink" title="部署到github上"></a>部署到github上</h2><p>现在将博客部署到github上  </p>
-<h4 id="部署之前先修改bolg下面的-config-yml"><a href="#部署之前先修改bolg下面的-config-yml" class="headerlink" title="部署之前先修改bolg下面的_config.yml"></a>部署之前先修改bolg下面的_config.yml</h4><pre><code>deploy:
+<h3 id="部署之前先修改bolg下面的-config-yml"><a href="#部署之前先修改bolg下面的-config-yml" class="headerlink" title="部署之前先修改bolg下面的_config.yml"></a>部署之前先修改bolg下面的_config.yml</h3><pre><code>deploy:
   type: git
   repo: https://github.com/lin1220/lin1220.github.io.git  //将lin1220替换成自己的用户名
   branch: master  
 </code></pre><p><em>备注：在hexo3.x版本下，type应该是git，不是github；另外冒号后面都有一个英文的空格，不然会报错的</em></p>
-<h4 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h4><pre><code>D:\Exploit\blog&gt;hexo d  
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><pre><code>D:\Exploit\blog&gt;hexo d  
 
 *****************************************
 

@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[windowsj小技巧]]></title>
+      <url>%2F2017%2F03%2F25%2Fwindowsj%E5%B0%8F%E6%8A%80%E5%B7%A7%2F</url>
+      <content type="text"><![CDATA[QQ邮箱在第三方客户端上没法同步http://win10.51wp.com/tutorial/269209.html windows右键没有 以管理员身份运行 选项，无法安装msi程序在搜索栏输入 Services.msc，察看Windows Installer服 务，如果当前状态时”已停止，请单击”启用“将其开启；找到windows/system32/目录下的cmd.exe，右键“以管理员身份运行” 输入：regsvr32 msi.dll 回车，提示“DllRegisterServer在msi.dll已成功” 定时关机shutdown -s -t 14400 远程桌面win+R输入mstsc，点击连接，输入密码 chrome提示flash过期google chrome停用过期flsh插件，导致用chrome浏览网页就直接提示flash过期，去扩展程序界面看提示检查更新失败，03错误 温馨提醒：清理用户数据时，确认书签已经同步到云 尝试解决办法：1、 卸载chrome重新安装（保留用户数据形式）—— 依然一浏览带flash网页就提示flash过期2、 手动删除chrome用户数据，并且卸载chrome重新安装最新版chrome —— 没有弹出，播放视频才提示flash过期 解决办法：需要新版本flash，并且是ppapi版本的 步骤： 1、 下载新插件并安装：install_flash_player_23_ppapi.exe2、 重启chrome]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[java关键字—volatile]]></title>
       <url>%2F2017%2F03%2F25%2Fjava%E5%85%B3%E9%94%AE%E5%AD%97%E2%80%94volatile%2F</url>
       <content type="text"><![CDATA[Java语言是支持多线程的，为了解决线程并发的问题，在语言内部引入了 同步块 和 volatile 关键字机制 synchronized同步块大家都比较熟悉，通过 synchronized 关键字来实现，所有加上synchronized 和 块语句，在多线程访问的时候，同一时刻只能有一个线程能够用synchronized修饰的方法 或者 代码块 volatile用volatile修饰的变量，线程在每次使用变量的时候，都会读取变量修改后的最的值。volatile很容易被误用，用来进行原子性操作 每一个线程运行时都有一个线程栈，线程栈保存了线程运行时候变量值信息。当线程访问某一个对象时候值的时候，首先通过对象的引用找到对应在堆内存的变量的值，然后把堆内存变量的具体值load到线程本地内存中，建立一个变量副本，之后线程就不再和对象在堆内存变量值有任何关系，而是直接修改副本变量的值，在修改完之后的某一个时刻（线程退出之前），自动把线程变量副本的值回写到对象在堆中变量。这样在堆中的对象的值就产生变化了 read and load 从主存复制变量到当前工作内存use and assign 执行代码，改变共享变量值store and write 用工作内存数据刷新主存相关内容 其中use and assign 可以多次出现 但是这一些操作并不是原子性，也就是在readload之后，如果主内存count变量发生修改之后，线程工作内存中的值由于已经加载，不会产生对应的变化，所以计算出来的结果会和预期不一样。 对于volatile修饰的变量，jvm虚拟机只是保证从主内存加载到线程工作内存的值是最新的 例如假如线程1，线程2 在进行read,load 操作中，发现主内存中count的值都是5，那么都会加载这个最新的值 在线程1堆count进行修改之后，会write到主内存中，主内存中的count变量就会变为6 线程2由于已经进行read,load操作，在进行运算之后，也会更新主内存count的变量值为6 导致两个线程及时用volatile关键字修改之后，还是会存在并发的情况]]></content>

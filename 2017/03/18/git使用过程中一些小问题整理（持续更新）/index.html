@@ -95,7 +95,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/03/18/git使用过程中一些小问题整理（持续更新）/index.html">
 <meta property="og:site_name" content="lin_1220">
 <meta property="og:description" content="本地sourceTree上仍然能够看到远程已经删除的分支原因我们第一次拉取用git管理的代码（或文件）到本地时，拉取的是整个工程代码，里面包含有很多分支，我们一般开发、测试、发布都有自己分支，加上各个模块都有自己的测试、发布分支（一般都有多个，某一版本哪一天的测试分支，发布分支，几十个分支是很常见的情况），分支很多，我们会定时在服务器上清理比较久远，对我们来说已经用不到的分支，假如我删除了us">
-<meta property="og:updated_time" content="2017-03-24T09:07:02.318Z">
+<meta property="og:updated_time" content="2017-03-25T03:30:36.490Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git使用过程中一些小问题整理（持续更新）">
 <meta name="twitter:description" content="本地sourceTree上仍然能够看到远程已经删除的分支原因我们第一次拉取用git管理的代码（或文件）到本地时，拉取的是整个工程代码，里面包含有很多分支，我们一般开发、测试、发布都有自己分支，加上各个模块都有自己的测试、发布分支（一般都有多个，某一版本哪一天的测试分支，发布分支，几十个分支是很常见的情况），分支很多，我们会定时在服务器上清理比较久远，对我们来说已经用不到的分支，假如我删除了us">
@@ -569,9 +569,9 @@
       
         <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=425298905&auto=1&height=66"></iframe>
 
-<h2 id="本地sourceTree上仍然能够看到远程已经删除的分支"><a href="#本地sourceTree上仍然能够看到远程已经删除的分支" class="headerlink" title="本地sourceTree上仍然能够看到远程已经删除的分支"></a>本地sourceTree上仍然能够看到远程已经删除的分支</h2><h4 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h4><p>我们第一次拉取用git管理的代码（或文件）到本地时，拉取的是整个工程代码，里面包含有很多分支，我们一般开发、测试、发布都有自己分支，加上各个模块都有自己的测试、发布分支（一般都有多个，某一版本哪一天的测试分支，发布分支，几十个分支是很常见的情况），分支很多，我们会定时在服务器上清理比较久远，对我们来说已经用不到的分支，假如我删除了user_test_20170109的分支，并把变更推送到服务器，对你自己的电脑来说，该分支你再也检测（git专有名称是跟踪）不到了，但是其他小伙伴的电脑上依然能够检测到该分支，刷新也没用，这是由于git本地仍然保存着第一次clone下来的分支信息，即使远程已经删除  </p>
+<h2 id="本地sourceTree上仍然能够看到远程已经删除的分支"><a href="#本地sourceTree上仍然能够看到远程已经删除的分支" class="headerlink" title="本地sourceTree上仍然能够看到远程已经删除的分支"></a>本地sourceTree上仍然能够看到远程已经删除的分支</h2><h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>我们第一次拉取用git管理的代码（或文件）到本地时，拉取的是整个工程代码，里面包含有很多分支，我们一般开发、测试、发布都有自己分支，加上各个模块都有自己的测试、发布分支（一般都有多个，某一版本哪一天的测试分支，发布分支，几十个分支是很常见的情况），分支很多，我们会定时在服务器上清理比较久远，对我们来说已经用不到的分支，假如我删除了user_test_20170109的分支，并把变更推送到服务器，对你自己的电脑来说，该分支你再也检测（git专有名称是跟踪）不到了，但是其他小伙伴的电脑上依然能够检测到该分支，刷新也没用，这是由于git本地仍然保存着第一次clone下来的分支信息，即使远程已经删除  </p>
 <h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h4><p>登陆git服务器，把stale（不新鲜的，过期的）状态的分支信息移除掉（.git文件里面记录的信息）  </p>
-<h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><p>1、打开sourceTree，点击右上角的“命令行模式”，然后执行命令 git remote show origin ，输入用户名和密码   </p>
+<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><p>1、打开sourceTree，点击右上角的“命令行模式”，然后执行命令 git remote show origin ，输入用户名和密码   </p>
 <pre><code>lenovo@LIN1220 /d/Exploit/test (qc_app_dev_user)
 $git remote show origin
 Username for &apos;http://192.168.30.6&apos;: dongsheng.lin
@@ -605,15 +605,15 @@ git -c diff.mnemonicprefix=false -c core.quotepath=false pull origin qc_app_v1.0
 0[main] us 0 init_cheap:VirtualAlloc pointer is null,Win32 error 487
 AllocationBase 0x0,BaseAddress 0xFE0000,RegionSize 0xB0000,State 0x10000
 D:\Software\devalop\git\Git\bin\sh.exe:*** Couldn&apos;t reserve space for cygwin&apos;s heap,Win32 erroe 0
-</code></pre><h4 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h4><p>进入git的安装目录，比如我的是 D:\Software\devalop\git\Git\bin，用管理员身份启动命令行，执行如下命令  </p>
+</code></pre><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>进入git的安装目录，比如我的是 D:\Software\devalop\git\Git\bin，用管理员身份启动命令行，执行如下命令  </p>
 <pre><code>D:\Software\devalop\git\Git\bin&gt;tasklist /m msys-1.0.dll
 D:\Software\devalop\git\Git\bin&gt;rebase.exe -b 0x50000000 msys-1.0.dll
 </code></pre><p>如果rebase命令执行报错，类似下面的提示：  </p>
 <pre><code>RebaseImage(msys-1.0.dll) failed with last error = 6
 </code></pre><p>那么您需要按顺序执行下面动作<br>1、把dll文件复制到另一个目录下<br>2、继续用上面的rebase命令<br>3、用复制出来的dll文件替换原来的<br>以上所有命令都必须用管理员身份执行</p>
 <h2 id="git文件大小写惹得祸"><a href="#git文件大小写惹得祸" class="headerlink" title="git文件大小写惹得祸"></a>git文件大小写惹得祸</h2><p>我们有时候会一不小心把文件（文件夹）的命名命错了，该大写的字母写成小写，该小写的写成大写的，发现之后把它改回来，提交到git，没毛病，但是其他同事的机器却会出现莫名其妙的问题，比如  </p>
-<h4 id="git服务器上有两份文件，一份大写，一份小写"><a href="#git服务器上有两份文件，一份大写，一份小写" class="headerlink" title="git服务器上有两份文件，一份大写，一份小写"></a>git服务器上有两份文件，一份大写，一份小写</h4><p>也许你会奇怪，在IDEA上明明看到就是一份文件，为什么git服务器上会有两份<br>原因：IDEA自动忽略了其中某一个文件，我们平时写代码查代码习惯直接看IDEA不看硬盘文件，回头看电脑硬盘文件目录就会发现其实真的是两份文件，一份大写一份小写<br>其实归根结底还是，.git文件提交记录未更新到最新状态，这跟清理远程已删除分支道理是一样的<br>解决方案：简单，手动删除一份您不需要的，提交到git就行了  </p>
-<h4 id="git拉取报错"><a href="#git拉取报错" class="headerlink" title="git拉取报错"></a>git拉取报错</h4><p>还是大小写导致的问题，您把原来大写的文件重新命名为小写，之后提交git，个别同事的电脑拉取代码会出现拉取不下来的情况，提示某某文件未跟踪<br>原因：您同事的电脑本地.git文件记录的是您原来提交到git服务器大写的文件，拉取时git检测不到它原先跟踪的文件，因此报错<br>解决方案：打开.gitignore文件，把报错的文件目录粘贴进去，再次拉去代码，没问题了吧。拉取好之后提交您变更的代码，之后就可以把刚才粘贴进去的文件目录去掉了，机智如我</p>
+<h3 id="git服务器上有两份文件，一份大写，一份小写"><a href="#git服务器上有两份文件，一份大写，一份小写" class="headerlink" title="git服务器上有两份文件，一份大写，一份小写"></a>git服务器上有两份文件，一份大写，一份小写</h3><p>也许你会奇怪，在IDEA上明明看到就是一份文件，为什么git服务器上会有两份<br>原因：IDEA自动忽略了其中某一个文件，我们平时写代码查代码习惯直接看IDEA不看硬盘文件，回头看电脑硬盘文件目录就会发现其实真的是两份文件，一份大写一份小写<br>其实归根结底还是，.git文件提交记录未更新到最新状态，这跟清理远程已删除分支道理是一样的<br>解决方案：简单，手动删除一份您不需要的，提交到git就行了  </p>
+<h3 id="git拉取报错"><a href="#git拉取报错" class="headerlink" title="git拉取报错"></a>git拉取报错</h3><p>还是大小写导致的问题，您把原来大写的文件重新命名为小写，之后提交git，个别同事的电脑拉取代码会出现拉取不下来的情况，提示某某文件未跟踪<br>原因：您同事的电脑本地.git文件记录的是您原来提交到git服务器大写的文件，拉取时git检测不到它原先跟踪的文件，因此报错<br>解决方案：打开.gitignore文件，把报错的文件目录粘贴进去，再次拉去代码，没问题了吧。拉取好之后提交您变更的代码，之后就可以把刚才粘贴进去的文件目录去掉了，机智如我</p>
 
       
     </div>
@@ -751,7 +751,7 @@ D:\Software\devalop\git\Git\bin&gt;rebase.exe -b 0x50000000 msys-1.0.dll
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -762,7 +762,7 @@ D:\Software\devalop\git\Git\bin&gt;rebase.exe -b 0x50000000 msys-1.0.dll
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -773,7 +773,7 @@ D:\Software\devalop\git\Git\bin&gt;rebase.exe -b 0x50000000 msys-1.0.dll
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -821,7 +821,7 @@ D:\Software\devalop\git\Git\bin&gt;rebase.exe -b 0x50000000 msys-1.0.dll
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#本地sourceTree上仍然能够看到远程已经删除的分支"><span class="nav-number">1.</span> <span class="nav-text">本地sourceTree上仍然能够看到远程已经删除的分支</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#原因"><span class="nav-number">1.0.1.</span> <span class="nav-text">原因</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方法"><span class="nav-number">1.0.2.</span> <span class="nav-text">解决方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#步骤"><span class="nav-number">1.0.3.</span> <span class="nav-text">步骤</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git拉取代码报错"><span class="nav-number">2.</span> <span class="nav-text">git拉取代码报错</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#解决办法"><span class="nav-number">2.0.1.</span> <span class="nav-text">解决办法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git文件大小写惹得祸"><span class="nav-number">3.</span> <span class="nav-text">git文件大小写惹得祸</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#git服务器上有两份文件，一份大写，一份小写"><span class="nav-number">3.0.1.</span> <span class="nav-text">git服务器上有两份文件，一份大写，一份小写</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git拉取报错"><span class="nav-number">3.0.2.</span> <span class="nav-text">git拉取报错</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#本地sourceTree上仍然能够看到远程已经删除的分支"><span class="nav-number">1.</span> <span class="nav-text">本地sourceTree上仍然能够看到远程已经删除的分支</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#原因"><span class="nav-number">1.1.</span> <span class="nav-text">原因</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方法"><span class="nav-number">1.1.1.</span> <span class="nav-text">解决方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#步骤"><span class="nav-number">1.2.</span> <span class="nav-text">步骤</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git拉取代码报错"><span class="nav-number">2.</span> <span class="nav-text">git拉取代码报错</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#解决办法"><span class="nav-number">2.1.</span> <span class="nav-text">解决办法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git文件大小写惹得祸"><span class="nav-number">3.</span> <span class="nav-text">git文件大小写惹得祸</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git服务器上有两份文件，一份大写，一份小写"><span class="nav-number">3.1.</span> <span class="nav-text">git服务器上有两份文件，一份大写，一份小写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git拉取报错"><span class="nav-number">3.2.</span> <span class="nav-text">git拉取报错</span></a></li></ol></li></ol></div>
             
 
           </div>

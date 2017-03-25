@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-24T08:24:44.204Z</updated>
+  <updated>2017-03-25T02:45:12.023Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,356 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>java关键字—volatile</title>
+    <link href="http://yoursite.com/2017/03/25/java%E5%85%B3%E9%94%AE%E5%AD%97%E2%80%94volatile/"/>
+    <id>http://yoursite.com/2017/03/25/java关键字—volatile/</id>
+    <published>2017-03-25T02:26:46.000Z</published>
+    <updated>2017-03-25T02:45:12.023Z</updated>
+    
+    <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=32408464&auto=1&height=66"></iframe>
+
+<p>Java语言是支持多线程的，为了解决线程并发的问题，在语言内部引入了 同步块 和 volatile 关键字机制  </p>
+<h4 id="synchronized"><a href="#synchronized" class="headerlink" title="synchronized"></a>synchronized</h4><p>同步块大家都比较熟悉，通过 synchronized 关键字来实现，所有加上synchronized 和 块语句，在多线程访问的时候，同一时刻只能有一个线程能够用synchronized修饰的方法 或者 代码块  </p>
+<h4 id="volatile"><a href="#volatile" class="headerlink" title="volatile"></a>volatile</h4><p>用volatile修饰的变量，线程在每次使用变量的时候，都会读取变量修改后的最的值。volatile很容易被误用，用来进行原子性操作  </p>
+<p>每一个线程运行时都有一个线程栈，线程栈保存了线程运行时候变量值信息。当线程访问某一个对象时候值的时候，首先通过对象的引用找到对应在堆内存的变量的值，然后把堆内存变量的具体值load到线程本地内存中，建立一个变量副本，之后线程就不再和对象在堆内存变量值有任何关系，而是直接修改副本变量的值，在修改完之后的某一个时刻（线程退出之前），自动把线程变量副本的值回写到对象在堆中变量。这样在堆中的对象的值就产生变化了  </p>
+<p><img src="http://oncnucmub.bkt.clouddn.com/Volatile.png" alt="image">  </p>
+<p>read and load 从主存复制变量到当前工作内存<br>use and assign 执行代码，改变共享变量值<br>store and write 用工作内存数据刷新主存相关内容  </p>
+<p>其中use and assign 可以多次出现  </p>
+<p>但是这一些操作并不是原子性，也就是在readload之后，如果主内存count变量发生修改之后，线程工作内存中的值由于已经加载，不会产生对应的变化，所以计算出来的结果会和预期不一样。  </p>
+<p>对于volatile修饰的变量，jvm虚拟机只是保证从主内存加载到线程工作内存的值是最新的  </p>
+<p>例如假如线程1，线程2 在进行read,load 操作中，发现主内存中count的值都是5，那么都会加载这个最新的值  </p>
+<p>在线程1堆count进行修改之后，会write到主内存中，主内存中的count变量就会变为6  </p>
+<p>线程2由于已经进行read,load操作，在进行运算之后，也会更新主内存count的变量值为6  </p>
+<p>导致两个线程及时用volatile关键字修改之后，还是会存在并发的情况  </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;id=
+    
+    </summary>
+    
+      <category term="java关键字" scheme="http://yoursite.com/categories/java%E5%85%B3%E9%94%AE%E5%AD%97/"/>
+    
+    
+      <category term="java关键字" scheme="http://yoursite.com/tags/java%E5%85%B3%E9%94%AE%E5%AD%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java关键字—transient</title>
+    <link href="http://yoursite.com/2017/03/25/java%E5%85%B3%E9%94%AE%E5%AD%97%E2%80%94transient/"/>
+    <id>http://yoursite.com/2017/03/25/java关键字—transient/</id>
+    <published>2017-03-25T02:20:50.000Z</published>
+    <updated>2017-03-25T02:25:20.571Z</updated>
+    
+    <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=28138493&auto=1&height=66"></iframe>
+
+<p>用途：实际开发中，需要限制对象中的敏感信息(密码/银行卡号)序列化，避免信息持久化到硬盘中。transient属性的生命周期仅存于调用者的内存中<br>总之，java 的transient关键字为我们提供了便利，你只需要实现Serilizable接口，将不需要序列化的属性前添加关键字transient，序列化对象的时候，这个属性就不会序列化到指定的目的地中  </p>
+<h4 id="使用小结"><a href="#使用小结" class="headerlink" title="使用小结"></a>使用小结</h4><ul>
+<li>一旦变量被transient修饰，变量将不再是对象持久化的一部分，该变量内容在序列化后无法获得访问  </li>
+<li>transient关键字只能修饰变量，而不能修饰方法和类。注意，本地变量是不能被transient关键字修饰的。变量如果是用户自定义类变量，则该类需要实现Serializable接口  </li>
+<li>被transient关键字修饰的变量不再能被序列化，一个静态变量不管是否被transient修饰，均不能被序列化。<strong>但JVM中会存在该类的静态成员值</strong>  </li>
+</ul>
+<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>在Java中，对象的序列化可以通过实现两种接口来实现  </p>
+<ul>
+<li>实现Serializable接口，所有的序列化将会自动进行  </li>
+<li>实现Externalizable接口，则没有任何东西可以自动序列化，需要在writeExternal方法中进行手工指定所要序列化的变量，这与是否被transient修饰无关</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;id=
+    
+    </summary>
+    
+      <category term="java关键字" scheme="http://yoursite.com/categories/java%E5%85%B3%E9%94%AE%E5%AD%97/"/>
+    
+    
+      <category term="java关键字" scheme="http://yoursite.com/tags/java%E5%85%B3%E9%94%AE%E5%AD%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java关键字—static</title>
+    <link href="http://yoursite.com/2017/03/25/java%E5%85%B3%E9%94%AE%E5%AD%97%E2%80%94static/"/>
+    <id>http://yoursite.com/2017/03/25/java关键字—static/</id>
+    <published>2017-03-25T02:04:34.000Z</published>
+    <updated>2017-03-25T02:16:48.455Z</updated>
+    
+    <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=32619064&auto=1&height=66"></iframe>
+
+<p>含义：全局/静态<br>用途：修饰成员变量、成员方法、代码块<br>原理：static变量/方法属于类，为类的所有实例共享，不是某一个实例独占。只要这个类被加载，Java虚拟机就能根据类名在运行时数据区的方法区内定找到他们。因此，static对象可以在它的任何对象创建之前访问，无需引用任何对象。  </p>
+<ul>
+<li>private/public/producted表示访问权限  </li>
+<li>static表示不需要实例化就可以使用  </li>
+</ul>
+<h4 id="static变量"><a href="#static变量" class="headerlink" title="static变量"></a>static变量</h4><ul>
+<li>静态变量：在内存中只有一个拷贝（节省内存），JVM只为静态分配一次内存，在加载类的过程中完成静态变量的内存分配，可用类名直接访问（方便），当然也可以通过对象来访问（但是这是不推荐的）  </li>
+<li>实例变量：每创建一个实例，就会为实例变量分配一次内存，实例变量可以在内存中有多个拷贝，互不影响（灵活）  </li>
+</ul>
+<h4 id="static方法"><a href="#static方法" class="headerlink" title="static方法"></a>static方法</h4><p>静态方法中不能用this和super关键字，不能直接访问所属类的实例变量和实例方法(就是不带static的成员变量和成员成员方法)，只能访问所属类的静态成员变量和成员方法。因为实例成员与特定的对象关联！这个需要去理解，想明白其中的道理，不是记忆！！！因为static方法独立于任何实例，因此static方法必须被实现，而不能是抽象的abstract  </p>
+<h4 id="static代码块"><a href="#static代码块" class="headerlink" title="static代码块"></a>static代码块</h4><p>static代码块也叫静态代码块，是在类中独立于类成员的static语句块，可以有多个，位置可以随便放，它不在任何的方法体内，JVM加载类时会执行这些静态的代码块，如果static代码块有多个，JVM将按照它们在类中出现的先后顺序依次执行它们，每个代码块只会被执行一次  </p>
+<pre><code>public class Test5 { 
+    private static int a; 
+    private int b; 
+
+    static { 
+            Test5.a = 3; 
+            System.out.println(a); 
+            Test5 t = new Test5(); 
+            t.f(); 
+            t.b = 1000; 
+            System.out.println(t.b); 
+    } 
+
+    static { 
+            Test5.a = 4; 
+            System.out.println(a); 
+    } 
+
+    public static void main(String[] args) { 
+            // TODO 自动生成方法存根 
+    } 
+
+    static { 
+            Test5.a = 5; 
+            System.out.println(a); 
+    } 
+
+    public void f() { 
+            System.out.println(&quot;hhahhahah&quot;); 
+    } 
+}
+</code></pre><p>运行结果：  </p>
+<pre><code>3
+hhahhahah
+1000
+4
+</code></pre><h4 id="static和final一块用表示什么"><a href="#static和final一块用表示什么" class="headerlink" title="static和final一块用表示什么"></a>static和final一块用表示什么</h4><p>static final用来修饰成员变量和成员方法，可简单理解为“全局常量”！<br>对于变量，表示一旦给值就不可修改，并且通过类名可以访问。<br>对于方法，表示不可覆盖，并且可以通过类名直接访问。  </p>
+<pre><code>特别要注意一个问题：
+对于被static和final修饰过的实例常量，实例本身不能再改变了，但对于一些容器类型（比如，ArrayList、HashMap）的实例变量，不可以改变容器变量本身，但可以修改容器中存放的对象，这一点在编程中用到很多。
+
+public class TestStaticFinal { 
+    private static final String strStaticFinalVar = &quot;aaa&quot;; 
+    private static String strStaticVar = null; 
+    private final String strFinalVar = null; 
+    private static final int intStaticFinalVar = 0; 
+    private static final Integer integerStaticFinalVar = new Integer(8); 
+    private static final ArrayList&lt;String&gt; alStaticFinalVar = new ArrayList&lt;String&gt;(); 
+
+    private void test() { 
+            System.out.println(&quot;-------------值处理前----------\r\n&quot;); 
+            System.out.println(&quot;strStaticFinalVar=&quot; + strStaticFinalVar + &quot;\r\n&quot;); 
+            System.out.println(&quot;strStaticVar=&quot; + strStaticVar + &quot;\r\n&quot;); 
+            System.out.println(&quot;strFinalVar=&quot; + strFinalVar + &quot;\r\n&quot;); 
+            System.out.println(&quot;intStaticFinalVar=&quot; + intStaticFinalVar + &quot;\r\n&quot;); 
+            System.out.println(&quot;integerStaticFinalVar=&quot; + integerStaticFinalVar + &quot;\r\n&quot;); 
+            System.out.println(&quot;alStaticFinalVar=&quot; + alStaticFinalVar + &quot;\r\n&quot;); 
+
+
+            //strStaticFinalVar=&quot;哈哈哈哈&quot;;        //错误，final表示终态,不可以改变变量本身. 
+            strStaticVar = &quot;哈哈哈哈&quot;;                //正确，static表示类变量,值可以改变. 
+            //strFinalVar=&quot;呵呵呵呵&quot;;                    //错误, final表示终态，在定义的时候就要初值（哪怕给个null），一旦给定后就不可再更改。 
+            //intStaticFinalVar=2;                        //错误, final表示终态，在定义的时候就要初值（哪怕给个null），一旦给定后就不可再更改。 
+            //integerStaticFinalVar=new Integer(8);            //错误, final表示终态，在定义的时候就要初值（哪怕给个null），一旦给定后就不可再更改。 
+            alStaticFinalVar.add(&quot;aaa&quot;);        //正确，容器变量本身没有变化，但存放内容发生了变化。这个规则是非常常用的，有很多用途。 
+            alStaticFinalVar.add(&quot;bbb&quot;);        //正确，容器变量本身没有变化，但存放内容发生了变化。这个规则是非常常用的，有很多用途。 
+
+            System.out.println(&quot;-------------值处理后----------\r\n&quot;); 
+            System.out.println(&quot;strStaticFinalVar=&quot; + strStaticFinalVar + &quot;\r\n&quot;); 
+            System.out.println(&quot;strStaticVar=&quot; + strStaticVar + &quot;\r\n&quot;); 
+            System.out.println(&quot;strFinalVar=&quot; + strFinalVar + &quot;\r\n&quot;); 
+            System.out.println(&quot;intStaticFinalVar=&quot; + intStaticFinalVar + &quot;\r\n&quot;); 
+            System.out.println(&quot;integerStaticFinalVar=&quot; + integerStaticFinalVar + &quot;\r\n&quot;); 
+            System.out.println(&quot;alStaticFinalVar=&quot; + alStaticFinalVar + &quot;\r\n&quot;); 
+    } 
+
+    public static void main(String args[]) { 
+            new TestStaticFinal().test(); 
+    } 
+}
+</code></pre><p>运行结果：  </p>
+<pre><code>-------------值处理前----------
+strStaticFinalVar=aaa
+strStaticVar=null
+strFinalVar=null
+intStaticFinalVar=0
+integerStaticFinalVar=8
+alStaticFinalVar=[]
+-------------值处理后----------
+strStaticFinalVar=aaa
+strStaticVar=哈哈哈哈
+strFinalVar=null
+intStaticFinalVar=0
+integerStaticFinalVar=8
+alStaticFinalVar=[aaa, bbb]
+
+Process finished with exit code 0
+</code></pre><p>通过static final修饰的<strong>容器类型变量中所“装”的对象是可改变的</strong>  </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;id=
+    
+    </summary>
+    
+      <category term="java关键字" scheme="http://yoursite.com/categories/java%E5%85%B3%E9%94%AE%E5%AD%97/"/>
+    
+    
+      <category term="java关键字" scheme="http://yoursite.com/tags/java%E5%85%B3%E9%94%AE%E5%AD%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java关键字—final</title>
+    <link href="http://yoursite.com/2017/03/24/java%E5%85%B3%E9%94%AE%E5%AD%97%E2%80%94final/"/>
+    <id>http://yoursite.com/2017/03/24/java关键字—final/</id>
+    <published>2017-03-24T09:09:56.000Z</published>
+    <updated>2017-03-25T02:28:13.794Z</updated>
+    
+    <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=28668855&auto=1&height=66"></iframe>
+
+<p>含义：无法改变的，终极的<br>用途：修饰非抽象类及其方法、变量<br>优势：设计、效率  </p>
+<ul>
+<li>final类：不能被继承，没有子类，final类中的方法默认是final的  </li>
+<li>final方法：不能被子类的方法覆盖，但可以被继承  </li>
+<li>final成员变量：表示常量，只能被赋值一次，赋值后值不再改变  </li>
+<li>final不能用于修饰构造方法  </li>
+<li>父类的private成员方法是不能被子类方法覆盖的，因此private类型的方法默认是final类型的  </li>
+</ul>
+<h4 id="final类"><a href="#final类" class="headerlink" title="final类"></a>final类</h4><p>该类不需要有子类，类的实现细节不允许改变，并且确信这个类不会被扩展  </p>
+<h4 id="final方法"><a href="#final方法" class="headerlink" title="final方法"></a>final方法</h4><p>一个类不允许其子类覆盖某个方法，则声明为final方法  </p>
+<p>原因：  </p>
+<ul>
+<li>方法锁定，防止任何继承类修改它的意义和实现  </li>
+<li>高效。编译器在遇到调用final方法时候会转入内嵌机制，大大提高执行效率  <pre><code>public class Test1 {
+public static void main(String[] args) { 
+// TODO 自动生成方法存根 
+}
+public void f1() { 
+System.out.println(&quot;f1&quot;); 
+} 
+//无法被子类覆盖的方法 
+public final void f2() { 
+System.out.println(&quot;f2&quot;); 
+} 
+public void f3() { 
+System.out.println(&quot;f3&quot;); 
+} 
+private void f4() { 
+System.out.println(&quot;f4&quot;); 
+} 
+} 
+public class Test2 extends Test1 { 
+public void f1(){     
+    System.out.println(&quot;Test1父类方法f1被覆盖!&quot;); 
+} 
+public static void main(String[] args) { 
+Test2 t=new Test2(); 
+t.f1();    
+t.f2(); //调用从父类继承过来的final方法 
+t.f3(); //调用从父类继承过来的方法 
+//t.f4(); //调用失败，无法从父类继承获得 
+} 
+}
+</code></pre></li>
+</ul>
+<h4 id="final变量"><a href="#final变量" class="headerlink" title="final变量"></a>final变量</h4><p>final成员变量表示常量，值一旦给定就无法改变！<br>final修饰的变量有：  </p>
+<ul>
+<li>静态变量  </li>
+<li>实例变量  </li>
+<li>局部变量  </li>
+</ul>
+<p>final变量定义的时候，可以先声明，而不给初值，这中变量也称为final空白，无论什么情况，编译器都确保空白final在使用之前必须被初始化。但是，final空白在final关键字final的使用上提供了更大的灵活性，为此，一个类中的final数据成员就可以实现依对象而有所不同，却有保持其恒定不变的特征  </p>
+<pre><code>package org.leizhimin; 
+
+public class Test3 { 
+    private final String S = &quot;final实例变量S&quot;; 
+    private final int A = 100; 
+    public final int B = 90; 
+
+    public static final int C = 80; 
+    private static final int D = 70; 
+
+    public final int E; //final空白,必须在初始化对象的时候赋初值 
+
+    public Test3(int x) { 
+            E = x; 
+    } 
+
+    /** 
+     * @param args 
+     */ 
+    public static void main(String[] args) { 
+            Test3 t = new Test3(2); 
+            //t.A=101;    //出错,final变量的值一旦给定就无法改变 
+            //t.B=91; //出错,final变量的值一旦给定就无法改变 
+            //t.C=81; //出错,final变量的值一旦给定就无法改变 
+            //t.D=71; //出错,final变量的值一旦给定就无法改变 
+
+            System.out.println(t.A); 
+            System.out.println(t.B); 
+            System.out.println(t.C); //不推荐用对象方式访问静态字段 
+            System.out.println(t.D); //不推荐用对象方式访问静态字段 
+            System.out.println(Test3.C); 
+            System.out.println(Test3.D); 
+            //System.out.println(Test3.E); //出错,因为E为final空白,依据不同对象值有所不同. 
+            System.out.println(t.E); 
+
+            Test3 t1 = new Test3(3); 
+            System.out.println(t1.E); //final空白变量E依据对象的不同而不同 
+    } 
+
+    private void test() { 
+            System.out.println(new Test3(1).A); 
+            System.out.println(Test3.C); 
+            System.out.println(Test3.D); 
+    } 
+
+    public void test2() { 
+            final int a;     //final空白,在需要的时候才赋值 
+            final int b = 4;    //局部常量--final用于局部变量的情形 
+            final int c;    //final空白,一直没有给赋值.    
+            a = 3; 
+            //a=4;    出错,已经给赋过值了. 
+            //b=2; 出错,已经给赋过值了. 
+    } 
+ }  
+</code></pre><h4 id="final参数"><a href="#final参数" class="headerlink" title="final参数"></a>final参数</h4><p>当函数参数为final类型时，你可以读取使用该参数，但是无法改变该参数的值  </p>
+<pre><code>public class Test4 { 
+    public static void main(String[] args) { 
+            new Test4().f1(2); 
+    } 
+
+    public void f1(final int i) { 
+            //i++;    //i是final类型的,值不允许改变的. 
+            System.out.print(i); 
+    } 
+ }
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;id=
+    
+    </summary>
+    
+      <category term="java关键字" scheme="http://yoursite.com/categories/java%E5%85%B3%E9%94%AE%E5%AD%97/"/>
+    
+    
+      <category term="java关键字" scheme="http://yoursite.com/tags/java%E5%85%B3%E9%94%AE%E5%AD%97/"/>
+    
+  </entry>
+  
+  <entry>
     <title>git使用过程中一些小问题整理（持续更新）</title>
-    <link href="http://yoursite.com/2017/03/24/git%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E4%B8%AD%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%EF%BC%89/"/>
-    <id>http://yoursite.com/2017/03/24/git使用过程中一些小问题整理（持续更新）/</id>
-    <published>2017-03-24T02:45:35.000Z</published>
-    <updated>2017-03-24T08:24:44.204Z</updated>
+    <link href="http://yoursite.com/2017/03/18/git%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E4%B8%AD%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%EF%BC%89/"/>
+    <id>http://yoursite.com/2017/03/18/git使用过程中一些小问题整理（持续更新）/</id>
+    <published>2017-03-18T02:45:35.000Z</published>
+    <updated>2017-03-24T09:07:02.318Z</updated>
     
     <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=425298905&auto=1&height=66"></iframe>
 

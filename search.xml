@@ -3,8 +3,15 @@
   
     
     <entry>
-      <title><![CDATA[windowsj小技巧]]></title>
-      <url>%2F2017%2F03%2F25%2Fwindowsj%E5%B0%8F%E6%8A%80%E5%B7%A7%2F</url>
+      <title><![CDATA[为什么要使用Spring Boot]]></title>
+      <url>%2F2017%2F03%2F29%2F%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8Spring-Boot%2F</url>
+      <content type="text"><![CDATA[传统java开发的烦恼用java开发web应用已经有20多年的历史了，从最初Servlet1.0到如今各种配套的库、框架，形成了成熟的生态系统，这对开发者而言，一方面是想实现什么功能，可能上网一找就有现成的解决方案，有前人踩过的坑，很方便；另一方面是，第三方库，框架那么多，整合起来各种版本不兼容，缺包错包问题不断，很多时间浪费在整合上，网上的教程不一定跟你现在用的版本一致，甚是烦人。用Oracle官方提供的工具问题少很多，但是工作量增加不少，我们是要快速解决业务问题的，不是有大把时间悠哉游哉研究技术再做业务的。 java开发的两个阵营 Oracle的Java EE，核心技术有Servlet, EJB, JMS, JSF, JDBC/JPA, JAXB, JAX-WS等，学术，臃肿复杂，难理解，脱离实际需求 Pivotal和开源社区的Spring：核心技术有Spring Framework, Spring MVC, Spring Data, Spring Security等，实用，各种框架整合，适应企业需求 开源带来生态繁荣的同时也带来了混乱，比如您要开发一个简单的web应用，至少需要spring整合mvc层框架（比如：springMVC）和数据连接层框架（如果用关系型数据库则有ROM框架如：hibernate或者mybatis），开发之后要部署，需要配置web运行容器，如WebSphere、Weblogic、Jboss、Tomcat、Jetty等。这么简单的一个应用您需要知道引入哪些jar，它们怎么配置，还有个恶心的版本不兼容问题，一想就头大，如果要整合其他第三方库，远程RPC如dubbo，日志搜集如kafka，消息队列如RocketMQ，缓存如redis，监控等等，就不能让我安静的写两行业务代码跑个demo么？ 我们真羡慕nodeJs用npm install *引包，然后npm run start就启动应用，还省硬件资源！ Spring Boot的诞生随着越来越多的开发者在开源社区的反馈，Spring Boot随着Spring 4.0的发布而诞生 Boot是引导的意思，SpringBoot简化了使用Spring的过程，帮助我们快速搭建Spring应用并无障碍启动 Spring Boot优点每一门新技术的诞生必定是为了解决某一个或某一类问题，Spring Boot也不例外。使用Spring Boot有如下优点 使编码变简单 使配置变简单 使部署变简单 使监控变简单 我们以前对spring的印象是各种xml、Annotation，眼花缭乱，简直就是“配置地狱”，如今Spring Boot把我们常用的web框架整合到一起，只要引入spring-boot-starter-web，其他配套的jar会一起下来，简直不能再方便，如下图： 采用了spring-boot-start-actuator之后，提供了基于http、ssh、telnet对运行时的项目进行监控，直接以REST的方式，获取进程的运行期性能参数 Spring Boot的不足Spring Boot作为一个微框架，离微服务的实现还是有距离的。没有提供相应的服务发现和注册的配套功能，自身的acturator所提供的监控功能，也需要与现有的监控对接。没有配套的安全管控方案，对于REST的落地，还需要自行结合实际进行URI的规范化工作。 本文及图片参考：http://www.primeton.com/read.php?id=2204&amp;his=1]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[windows小技巧]]></title>
+      <url>%2F2017%2F03%2F25%2Fwindows%E5%B0%8F%E6%8A%80%E5%B7%A7%2F</url>
       <content type="text"><![CDATA[QQ邮箱在第三方客户端上没法同步http://win10.51wp.com/tutorial/269209.html windows右键没有 以管理员身份运行 选项，无法安装msi程序在搜索栏输入 Services.msc，察看Windows Installer服 务，如果当前状态时”已停止，请单击”启用“将其开启；找到windows/system32/目录下的cmd.exe，右键“以管理员身份运行” 输入：regsvr32 msi.dll 回车，提示“DllRegisterServer在msi.dll已成功” 定时关机shutdown -s -t 14400 远程桌面win+R输入mstsc，点击连接，输入密码 chrome提示flash过期google chrome停用过期flsh插件，导致用chrome浏览网页就直接提示flash过期，去扩展程序界面看提示检查更新失败，03错误 温馨提醒：清理用户数据时，确认书签已经同步到云 尝试解决办法：1、 卸载chrome重新安装（保留用户数据形式）—— 依然一浏览带flash网页就提示flash过期2、 手动删除chrome用户数据，并且卸载chrome重新安装最新版chrome —— 没有弹出，播放视频才提示flash过期 解决办法：需要新版本flash，并且是ppapi版本的 步骤： 1、 下载新插件并安装：install_flash_player_23_ppapi.exe2、 重启chrome]]></content>
     </entry>
 

@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2017/03/25/windowsj%E5%B0%8F%E6%8A%80%E5%B7%A7/</loc>
+    <loc>http://yoursite.com/2017/03/29/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8Spring-Boot/</loc>
     
-    <lastmod>2017-03-25T06:01:35.609Z</lastmod>
+    <lastmod>2017-03-29T08:09:31.146Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/03/25/windows%E5%B0%8F%E6%8A%80%E5%B7%A7/</loc>
+    
+    <lastmod>2017-03-25T06:57:35.201Z</lastmod>
     
   </url>
   

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-25T06:01:35.609Z</updated>
+  <updated>2017-03-29T08:09:31.146Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,58 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>windowsj小技巧</title>
-    <link href="http://yoursite.com/2017/03/25/windowsj%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
-    <id>http://yoursite.com/2017/03/25/windowsj小技巧/</id>
+    <title>为什么要使用Spring Boot</title>
+    <link href="http://yoursite.com/2017/03/29/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8Spring-Boot/"/>
+    <id>http://yoursite.com/2017/03/29/为什么要使用Spring-Boot/</id>
+    <published>2017-03-29T06:33:53.000Z</published>
+    <updated>2017-03-29T08:09:31.146Z</updated>
+    
+    <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=26830110&auto=1&height=66"></iframe>
+
+<h2 id="传统java开发的烦恼"><a href="#传统java开发的烦恼" class="headerlink" title="传统java开发的烦恼"></a>传统java开发的烦恼</h2><p>用java开发web应用已经有20多年的历史了，从最初Servlet1.0到如今各种配套的库、框架，形成了成熟的生态系统，这对开发者而言，一方面是想实现什么功能，可能上网一找就有现成的解决方案，有前人踩过的坑，很方便；另一方面是，第三方库，框架那么多，整合起来各种版本不兼容，缺包错包问题不断，很多时间浪费在整合上，网上的教程不一定跟你现在用的版本一致，甚是烦人。用Oracle官方提供的工具问题少很多，但是工作量增加不少，我们是要快速解决业务问题的，不是有大把时间悠哉游哉研究技术再做业务的。 </p>
+<p><img src="http://oncnucmub.bkt.clouddn.com/springBoot2.png" alt="image"> </p>
+<p>java开发的两个阵营  </p>
+<ul>
+<li>Oracle的Java EE，核心技术有Servlet, EJB, JMS, JSF, JDBC/JPA, JAXB, JAX-WS等，学术，臃肿复杂，难理解，脱离实际需求  </li>
+<li>Pivotal和开源社区的Spring：核心技术有Spring Framework, Spring MVC, Spring Data, Spring Security等，实用，各种框架整合，适应企业需求  </li>
+</ul>
+<p>开源带来生态繁荣的同时也带来了混乱，比如您要开发一个简单的web应用，至少需要spring整合mvc层框架（比如：springMVC）和数据连接层框架（如果用关系型数据库则有ROM框架如：hibernate或者mybatis），开发之后要部署，需要配置web运行容器，如WebSphere、Weblogic、Jboss、Tomcat、Jetty等。这么简单的一个应用您需要知道引入哪些jar，它们怎么配置，还有个恶心的版本不兼容问题，一想就头大，如果要整合其他第三方库，远程RPC如dubbo，日志搜集如kafka，消息队列如RocketMQ，缓存如redis，监控等等，就不能让我安静的写两行业务代码跑个demo么？ 我们真羡慕nodeJs用npm install <em>*</em>引包，然后npm run start就启动应用，还省硬件资源！  </p>
+<h2 id="Spring-Boot的诞生"><a href="#Spring-Boot的诞生" class="headerlink" title="Spring Boot的诞生"></a>Spring Boot的诞生</h2><p>随着越来越多的开发者在开源社区的反馈，Spring Boot随着Spring 4.0的发布而诞生  </p>
+<p><img src="http://oncnucmub.bkt.clouddn.com/springBoot3.png" alt="image">  </p>
+<p>Boot是引导的意思，SpringBoot简化了使用Spring的过程，帮助我们快速搭建Spring应用并无障碍启动  </p>
+<h2 id="Spring-Boot优点"><a href="#Spring-Boot优点" class="headerlink" title="Spring Boot优点"></a>Spring Boot优点</h2><p>每一门新技术的诞生必定是为了解决某一个或某一类问题，Spring Boot也不例外。<br>使用Spring Boot有如下优点  </p>
+<ul>
+<li>使编码变简单  </li>
+<li>使配置变简单  </li>
+<li>使部署变简单  </li>
+<li>使监控变简单  </li>
+</ul>
+<p><img src="http://oncnucmub.bkt.clouddn.com/springBoot4.png" alt="image">  </p>
+<p>我们以前对spring的印象是各种xml、Annotation，眼花缭乱，简直就是“配置地狱”，如今Spring Boot把我们常用的web框架整合到一起，只要引入spring-boot-starter-web，其他配套的jar会一起下来，简直不能再方便，如下图：<br><img src="http://oncnucmub.bkt.clouddn.com/springBoot1.png" alt="image"><br><img src="http://oncnucmub.bkt.clouddn.com/springBoot5.png" alt="image"><br><img src="http://oncnucmub.bkt.clouddn.com/springBoot6.png" alt="image"><br><img src="http://oncnucmub.bkt.clouddn.com/springBoot7.png" alt="image"></p>
+<p>采用了spring-boot-start-actuator之后，提供了基于http、ssh、telnet对运行时的项目进行监控，直接以REST的方式，获取进程的运行期性能参数  </p>
+<h2 id="Spring-Boot的不足"><a href="#Spring-Boot的不足" class="headerlink" title="Spring Boot的不足"></a>Spring Boot的不足</h2><p><img src="http://oncnucmub.bkt.clouddn.com/springBoot8.png" alt="image"><br>Spring Boot作为一个微框架，离微服务的实现还是有距离的。<br>没有提供相应的服务发现和注册的配套功能，自身的acturator所提供的监控功能，也需要与现有的监控对接。没有配套的安全管控方案，对于REST的落地，还需要自行结合实际进行URI的规范化工作。  </p>
+<p>本文及图片参考：<a href="http://www.primeton.com/read.php?id=2204&amp;his=1" target="_blank" rel="external">http://www.primeton.com/read.php?id=2204&amp;his=1</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;id=
+    
+    </summary>
+    
+      <category term="Spring Boot" scheme="http://yoursite.com/categories/Spring-Boot/"/>
+    
+    
+      <category term="Spring Boot" scheme="http://yoursite.com/tags/Spring-Boot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>windows小技巧</title>
+    <link href="http://yoursite.com/2017/03/25/windows%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+    <id>http://yoursite.com/2017/03/25/windows小技巧/</id>
     <published>2017-03-25T03:59:34.000Z</published>
-    <updated>2017-03-25T06:01:35.609Z</updated>
+    <updated>2017-03-25T06:57:35.201Z</updated>
     
     <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=417833754&auto=1&height=66"></iframe>
 
